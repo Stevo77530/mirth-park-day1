@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MIRTH Park — Day One</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <header>
+            <h1>MIRTH Park <span class="subtitle">— Day One Prototype</span></h1>
+            <div id="top-stats">
+                <div class="stat">Day: <span id="day">1</span></div>
+                <div class="stat">Profit: $<span id="profit">12450</span></div>
+                <div class="stat">Suspicion: <span id="suspicion">12</span>%</div>
+                <div class="stat">Guests: <span id="guest-count">42</span></div>
+            </div>
+        </header>
+
+        <div id="main-content">
+            <!-- Build Palette -->
+            <div id="build-panel">
+                <h3>Build</h3>
+                <div class="build-options">
+                    <button class="build-btn active" data-type="path">Path</button>
+                    <button class="build-btn" data-type="teacups">Teacups</button>
+                    <button class="build-btn" data-type="panic">Panic Wheel</button>
+                    <button class="build-btn" data-type="exit">Fake Exit</button>
+                </div>
+                <p class="hint">Click empty tile to place. Right-click to remove.</p>
+                <div id="selected-info"></div>
+            </div>
+
+            <!-- Game Canvas -->
+            <div id="canvas-container">
+                <canvas id="game-canvas" width="800" height="600"></canvas>
+                <div id="tooltip"></div>
+            </div>
+
+            <!-- MIRTH Log + Info -->
+            <div id="mirth-panel">
+                <h3>M.I.R.T.H. Log</h3>
+                <div id="mirth-log"></div>
+                
+                <div id="guest-summary">
+                    <h4>Guest Overview</h4>
+                    <div class="mini-stat">Avg Escape Drive: <span id="avg-escape">28</span>%</div>
+                    <div class="mini-stat">High Suspicion Guests: <span id="high-suspicion">3</span></div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <div id="instructions">
+                Isometric prototype • Click to build • Watch MIRTH react • Survive the week
+            </div>
+        </footer>
+    </div>
+
+    <script src="isometric.js"></script>
+    <script src="guest.js"></script>
+    <script src="mirth.js"></script>
+    <script src="game.js"></script>
+</body>
+</html>

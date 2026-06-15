@@ -1,0 +1,201 @@
+:root {
+    --bg: #0f0f12;
+    --panel: #1a1a20;
+    --accent: #ff2d95;
+    --accent2: #00f0ff;
+    --text: #e0e0e0;
+    --warning: #ffaa00;
+    --danger: #ff4444;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    overflow: hidden;
+}
+
+#app {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+header {
+    background: var(--panel);
+    padding: 12px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #333;
+}
+
+h1 {
+    margin: 0;
+    font-size: 1.6rem;
+    color: #fff;
+}
+
+.subtitle {
+    font-size: 0.9rem;
+    color: #888;
+    font-weight: normal;
+}
+
+#top-stats {
+    display: flex;
+    gap: 24px;
+}
+
+.stat {
+    font-size: 0.95rem;
+    background: #111;
+    padding: 4px 12px;
+    border-radius: 4px;
+    border: 1px solid #333;
+}
+
+#main-content {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+    gap: 8px;
+    padding: 12px;
+}
+
+#build-panel, #mirth-panel {
+    width: 220px;
+    background: var(--panel);
+    border: 1px solid #333;
+    border-radius: 6px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+}
+
+#build-panel h3, #mirth-panel h3 {
+    margin: 0 0 12px 0;
+    font-size: 1.1rem;
+    color: var(--accent);
+}
+
+.build-options {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+.build-btn {
+    background: #222;
+    color: var(--text);
+    border: 1px solid #444;
+    padding: 10px 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.1s;
+}
+
+.build-btn:hover {
+    background: #333;
+    border-color: var(--accent);
+}
+
+.build-btn.active {
+    background: var(--accent);
+    color: white;
+    border-color: var(--accent);
+}
+
+.hint {
+    font-size: 0.75rem;
+    color: #888;
+    margin: 0;
+}
+
+#canvas-container {
+    flex: 1;
+    position: relative;
+    background: #111;
+    border: 2px solid #333;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+#game-canvas {
+    display: block;
+    cursor: crosshair;
+    image-rendering: pixelated;
+}
+
+#tooltip {
+    position: absolute;
+    background: rgba(0,0,0,0.85);
+    color: #fff;
+    padding: 4px 8px;
+    border-radius: 3px;
+    font-size: 0.75rem;
+    pointer-events: none;
+    display: none;
+    z-index: 10;
+}
+
+#mirth-panel {
+    width: 280px;
+}
+
+#mirth-log {
+    flex: 1;
+    background: #111;
+    border: 1px solid #333;
+    border-radius: 4px;
+    padding: 8px;
+    overflow-y: auto;
+    font-size: 0.85rem;
+    line-height: 1.4;
+    margin-bottom: 12px;
+}
+
+.mirth-msg {
+    margin-bottom: 8px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #222;
+}
+
+.mirth-msg:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.mirth-msg .time {
+    color: #666;
+    font-size: 0.7rem;
+}
+
+.mirth-msg .text {
+    color: #ddd;
+}
+
+#guest-summary {
+    background: #111;
+    border: 1px solid #333;
+    border-radius: 4px;
+    padding: 10px;
+    font-size: 0.85rem;
+}
+
+.mini-stat {
+    margin: 4px 0;
+}
+
+footer {
+    background: var(--panel);
+    padding: 8px 24px;
+    font-size: 0.8rem;
+    color: #666;
+    text-align: center;
+    border-top: 1px solid #333;
+}
